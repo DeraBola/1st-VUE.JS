@@ -11,6 +11,9 @@
 <body>
     <div id="shopping-list">
         <h1>{{header || 'Welcome'}}</h1>
+        <ul>
+            <li v-for="item in items">{{item}}</li>
+        </ul>
 
     </div>
     <script src="https://unpkg.com/vue@3"></script>
@@ -18,12 +21,20 @@
         const shoppingList = Vue.createApp({
                 data() {
                     return {
-                        header: "Shopping List App"
+                        header: "Shopping List App",
+                        items: [
+                            "10 party hats",
+                            "2 game cards",
+                            "20 cups",
+                        ]
+
                     }
                 }
             })
             .mount('#shopping-list')
     </script>
 </body>
+
+</html>
 
 </html>
